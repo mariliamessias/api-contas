@@ -1,4 +1,4 @@
-package com.banco.bancoapi.config;
+package com.banco.accountapi.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

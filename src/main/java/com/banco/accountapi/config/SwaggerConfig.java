@@ -1,4 +1,4 @@
-package com.banco.bancoapi.config;
+package com.banco.accountapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,10 +19,10 @@ import static springfox.documentation.builders.PathSelectors.regex;
 public class SwaggerConfig {
 
     @Bean
-    public Docket contaApi(){
+    public Docket AccountApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.banco.bancoapi"))
+                .apis(RequestHandlerSelectors.basePackage("com.banco.accountapi"))
                 .paths(regex("/api.*"))
                 .build()
                 .apiInfo(metaInfo());
@@ -31,8 +31,8 @@ public class SwaggerConfig {
 
     private ApiInfo metaInfo(){
         ApiInfo apiInfo = new ApiInfo(
-                "Conta API REST",
-                "API REST de cadastro de contas",
+                "Account API REST",
+                "API REST from register of Accounts",
                 "1.0",
                 "Terms of Service",
                 new Contact("Marilia Messias", "mariliamessias", "marilia.oliveira@outlook.com"),
